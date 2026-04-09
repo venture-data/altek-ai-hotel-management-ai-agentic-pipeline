@@ -1,0 +1,252 @@
+{
+  "hotel": {
+    "name": "Grand Oslo Hotel",
+    "address": "Karl Johans gate 31, 0159 Oslo, Norway",
+    "phone": "+47 22 00 00 00",
+    "email": "reservations@grandoslohotel.com",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "currency": "NOK",
+    "timezone": "Europe/Oslo"
+  },
+
+  "policies": {
+    "cancellation": {
+      "standard": "Free cancellation up to 24 hours before check-in. After that, the first night is charged.",
+      "non_refundable": "Non-refundable bookings cannot be cancelled or modified. The full amount is charged at the time of booking.",
+      "flexible": "Free cancellation up to 7 days before check-in. 50% charge within 7 days."
+    },
+    "pets": "Small pets (under 10 kg) are allowed in designated pet-friendly rooms for an additional fee of 300 NOK per night.",
+    "breakfast": "Breakfast is served daily from 07:00 to 10:30 in the ground floor restaurant. It can be added to any booking for 250 NOK per person per night.",
+    "parking": "On-site parking is available for 350 NOK per night. Reservation is recommended.",
+    "extra_bed": "An extra bed can be added to Superior and Suite room types for 400 NOK per night. Maximum one extra bed per room.",
+    "children": "Children under 5 stay free in existing beds. Children 5–12 are charged 50% of the extra bed rate."
+  },
+
+  "room_types": [
+    {
+      "id": "RT001",
+      "name": "Standard Single",
+      "description": "Cozy room with a single bed, work desk, and city view.",
+      "max_occupancy": 1,
+      "bed_type": "single",
+      "base_rate_per_night": 1200,
+      "amenities": ["wifi", "tv", "minibar", "safe"]
+    },
+    {
+      "id": "RT002",
+      "name": "Standard Double",
+      "description": "Comfortable room with a queen-size bed, seating area, and city view.",
+      "max_occupancy": 2,
+      "bed_type": "queen",
+      "base_rate_per_night": 1800,
+      "amenities": ["wifi", "tv", "minibar", "safe", "bathrobe"]
+    },
+    {
+      "id": "RT003",
+      "name": "Superior Double",
+      "description": "Spacious room with a king-size bed, lounge area, and fjord view.",
+      "max_occupancy": 3,
+      "bed_type": "king",
+      "base_rate_per_night": 2500,
+      "amenities": ["wifi", "tv", "minibar", "safe", "bathrobe", "nespresso", "fjord_view"],
+      "extra_bed_available": true
+    },
+    {
+      "id": "RT004",
+      "name": "Junior Suite",
+      "description": "Luxury suite with separate living area, king-size bed, and panoramic fjord view.",
+      "max_occupancy": 3,
+      "bed_type": "king",
+      "base_rate_per_night": 3800,
+      "amenities": ["wifi", "tv", "minibar", "safe", "bathrobe", "nespresso", "fjord_view", "lounge", "balcony"],
+      "extra_bed_available": true
+    }
+  ],
+
+  "rate_plans": [
+    {
+      "id": "RP001",
+      "name": "Standard Rate",
+      "cancellation_policy": "standard",
+      "includes_breakfast": false,
+      "rate_modifier": 1.0
+    },
+    {
+      "id": "RP002",
+      "name": "Breakfast Included",
+      "cancellation_policy": "standard",
+      "includes_breakfast": true,
+      "rate_modifier": 1.0,
+      "breakfast_supplement_per_person": 250
+    },
+    {
+      "id": "RP003",
+      "name": "Non-Refundable Saver",
+      "cancellation_policy": "non_refundable",
+      "includes_breakfast": false,
+      "rate_modifier": 0.85
+    },
+    {
+      "id": "RP004",
+      "name": "Flexible Rate",
+      "cancellation_policy": "flexible",
+      "includes_breakfast": true,
+      "rate_modifier": 1.15,
+      "breakfast_supplement_per_person": 0
+    }
+  ],
+
+  "availability": {
+    "_comment": "Number of available rooms per room type per date. Dates not listed have zero availability.",
+    "2025-04-18": {"RT001": 3, "RT002": 2, "RT003": 1, "RT004": 1},
+    "2025-04-19": {"RT001": 3, "RT002": 2, "RT003": 1, "RT004": 1},
+    "2025-04-20": {"RT001": 2, "RT002": 1, "RT003": 1, "RT004": 1},
+    "2025-04-21": {"RT001": 2, "RT002": 1, "RT003": 1, "RT004": 1},
+    "2025-04-22": {"RT001": 1, "RT002": 0, "RT003": 1, "RT004": 1},
+    "2025-04-23": {"RT001": 1, "RT002": 0, "RT003": 1, "RT004": 1},
+    "2025-04-24": {"RT001": 3, "RT002": 2, "RT003": 2, "RT004": 1},
+    "2025-04-25": {"RT001": 3, "RT002": 2, "RT003": 2, "RT004": 1},
+    "2025-04-26": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1},
+    "2026-05-21": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1},
+    "2026-05-22": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1},
+    "2026-05-23": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1},
+    "2026-05-24": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1},
+    "2026-05-25": {"RT001": 0, "RT002": 0, "RT003": 0, "RT004": 1}
+  },
+
+  "guests": [
+    {
+      "id": "G001",
+      "first_name": "Erik",
+      "last_name": "Hansen",
+      "email": "erik.hansen@email.com",
+      "phone": "+47 900 11 222",
+      "nationality": "NO",
+      "created_at": "2024-01-15"
+    },
+    {
+      "id": "G002",
+      "first_name": "Maria",
+      "last_name": "Gonzalez",
+      "email": "maria.gonzalez@email.com",
+      "phone": "+34 612 345 678",
+      "nationality": "ES",
+      "created_at": "2024-03-22"
+    },
+    {
+      "id": "G003",
+      "first_name": "James",
+      "last_name": "Smith",
+      "email": "james.smith@email.com",
+      "phone": "+44 7700 900123",
+      "nationality": "GB",
+      "created_at": "2024-06-10"
+    },
+    {
+      "id": "G004",
+      "first_name": "Yuki",
+      "last_name": "Tanaka",
+      "email": "yuki.tanaka@email.com",
+      "phone": "+81 90 1234 5678",
+      "nationality": "JP",
+      "created_at": "2024-09-05"
+    },
+    {
+      "id": "G005",
+      "first_name": "Anna",
+      "last_name": "Berg",
+      "email": "anna.berg@email.com",
+      "phone": "+46 70 123 4567",
+      "nationality": "SE",
+      "created_at": "2025-01-12"
+    }
+  ],
+
+  "reservations": [
+    {
+      "id": "RES001",
+      "guest_id": "G001",
+      "room_type_id": "RT002",
+      "rate_plan_id": "RP001",
+      "check_in": "2025-04-20",
+      "check_out": "2025-04-23",
+      "adults": 2,
+      "children": 0,
+      "status": "confirmed",
+      "total_amount": 5400,
+      "notes": "",
+      "created_at": "2025-03-01"
+    },
+    {
+      "id": "RES002",
+      "guest_id": "G002",
+      "room_type_id": "RT003",
+      "rate_plan_id": "RP003",
+      "check_in": "2025-04-18",
+      "check_out": "2025-04-21",
+      "adults": 2,
+      "children": 1,
+      "status": "confirmed",
+      "total_amount": 6375,
+      "notes": "Non-refundable rate booked. Guest requested high floor.",
+      "created_at": "2025-02-14"
+    },
+    {
+      "id": "RES003",
+      "guest_id": "G003",
+      "room_type_id": "RT004",
+      "rate_plan_id": "RP004",
+      "check_in": "2025-04-25",
+      "check_out": "2025-04-27",
+      "adults": 2,
+      "children": 0,
+      "status": "confirmed",
+      "total_amount": 8740,
+      "notes": "Anniversary trip. Flexible rate with breakfast.",
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": "RES004",
+      "guest_id": "G001",
+      "room_type_id": "RT003",
+      "rate_plan_id": "RP002",
+      "check_in": "2025-05-10",
+      "check_out": "2025-05-12",
+      "adults": 1,
+      "children": 0,
+      "status": "confirmed",
+      "total_amount": 5500,
+      "notes": "Business trip. Breakfast included.",
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": "RES005",
+      "guest_id": "G004",
+      "room_type_id": "RT001",
+      "rate_plan_id": "RP003",
+      "check_in": "2025-04-20",
+      "check_out": "2025-04-22",
+      "adults": 1,
+      "children": 0,
+      "status": "confirmed",
+      "total_amount": 2040,
+      "notes": "Non-refundable saver rate.",
+      "created_at": "2025-03-25"
+    },
+    {
+      "id": "RES006",
+      "guest_id": "G005",
+      "room_type_id": "RT002",
+      "rate_plan_id": "RP001",
+      "check_in": "2025-04-19",
+      "check_out": "2025-04-21",
+      "adults": 2,
+      "children": 0,
+      "status": "cancelled",
+      "total_amount": 3600,
+      "notes": "Cancelled by guest on 2025-04-01.",
+      "created_at": "2025-02-28"
+    }
+  ]
+}
